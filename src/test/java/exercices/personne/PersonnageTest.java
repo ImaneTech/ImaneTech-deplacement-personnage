@@ -85,4 +85,14 @@ public class PersonnageTest {
         //THEN
         assertThat(ActualResult).isEqualTo(ExpectedResult);
     }
+
+    @Test
+    public void testTourner_1_negative() {
+        //GIVEN
+        String ExpectedResult = "OUEST";
+        //WHEN
+        String ActualResult = monPersonnage.tourner(-1);
+        //THEN
+        assertThat(ActualResult).isEqualTo(ExpectedResult);
+    }
 }

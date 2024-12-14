@@ -8,7 +8,7 @@ public class Personnage {
 
     public String tourner(int fois) {
         String[] directions = {"NORD", "EST", "SUD", "OUEST"};
-        return directions[fois % 4];
+        return directions[(fois % 4 + 4) % 4];
     }
 
 }
