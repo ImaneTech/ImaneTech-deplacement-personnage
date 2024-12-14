@@ -7,15 +7,23 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class PersonnageTest {
 
+    private Personnage monPersonnage;
 
+    @BeforeEach
+    public void setUp() {
+       monPersonnage = new Personnage();
+    }
+    @AfterEach
+    public void tearDown() {
+        monPersonnage = null;
+    }
 
     @Test
     public void testTournerZero() {
         //GIVEN
-        Personnage p = new Personnage();
          String ExpectedResult = "NORD";
         //WHEN
-          String ActualResult = p.tourner(0);
+          String ActualResult = monPersonnage.tourner(0);
         //THEN
         assertThat(ActualResult).isEqualTo(ExpectedResult);
     }
@@ -23,7 +31,6 @@ public class PersonnageTest {
     @Test
     public void testTournerUn() {
         //GIVEN
-        Personnage monPersonnage = new Personnage();
         String ExpectedResult = "EST";
         //WHEN
         String ActualResult = monPersonnage.tourner(1);
@@ -33,7 +40,6 @@ public class PersonnageTest {
     @Test
     public void testTournerDeux() {
         //GIVEN
-        Personnage monPersonnage = new Personnage();
         String ExpectedResult = "SUD";
         //WHEN
         String ActualResult = monPersonnage.tourner(2);
@@ -44,7 +50,6 @@ public class PersonnageTest {
     @Test
     public void testTourner_3() {
         //GIVEN
-        Personnage monPersonnage = new Personnage();
         String ExpectedResult = "OUEST";
         //WHEN
         String ActualResult = monPersonnage.tourner(3);
@@ -55,7 +60,6 @@ public class PersonnageTest {
     @Test
     public void testTourner_4() {
         //GIVEN
-        Personnage monPersonnage = new Personnage();
         String ExpectedResult = "NORD";
         //WHEN
         String ActualResult = monPersonnage.tourner(4);
@@ -65,7 +69,6 @@ public class PersonnageTest {
     @Test
     public void testTourner_5() {
         //GIVEN
-        Personnage monPersonnage = new Personnage();
         String ExpectedResult = "EST";
         //WHEN
         String ActualResult = monPersonnage.tourner(5);
@@ -76,14 +79,10 @@ public class PersonnageTest {
     @Test
     public void testTourner_10() {
         //GIVEN
-        Personnage monPersonnage = new Personnage();
         String ExpectedResult = "SUD";
         //WHEN
         String ActualResult = monPersonnage.tourner(10);
         //THEN
         assertThat(ActualResult).isEqualTo(ExpectedResult);
     }
-
-
-
 }
