@@ -1,9 +1,21 @@
 package exercices.personne;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
 public class PersonnageTest {
+
+    @Test
+    public void testTournerZero() {
+        //GIVEN
+        Personnage p = new Personnage();
+         String ExpectedResult = "NORD";
+        //WHEN
+          String ActualResult = p.tourner(0);
+        //THEN
+        assertThat(ActualResult).isEqualTo(ExpectedResult);
+    }
 
 }
