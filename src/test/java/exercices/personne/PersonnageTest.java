@@ -62,5 +62,28 @@ public class PersonnageTest {
         //THEN
         assertThat(ActualResult).isEqualTo(ExpectedResult);
     }
+    @Test
+    public void testTourner_5() {
+        //GIVEN
+        Personnage monPersonnage = new Personnage();
+        String ExpectedResult = "EST";
+        //WHEN
+        String ActualResult = monPersonnage.tourner(5);
+        //THEN
+        assertThat(ActualResult).isEqualTo(ExpectedResult);
+    }
+
+    @Test
+    public void testTourner_10() {
+        //GIVEN
+        Personnage monPersonnage = new Personnage();
+        String ExpectedResult = "SUD";
+        //WHEN
+        String ActualResult = monPersonnage.tourner(10);
+        //THEN
+        assertThat(ActualResult).isEqualTo(ExpectedResult);
+    }
+
+
 
 }
