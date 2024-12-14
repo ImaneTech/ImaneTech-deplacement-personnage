@@ -30,4 +30,14 @@ public class PersonnageTest {
         //THEN
         assertThat(ActualResult).isEqualTo(ExpectedResult);
     }
+    @Test
+    public void testTournerDeux() {
+        //GIVEN
+        Personnage monPersonnage = new Personnage();
+        String ExpectedResult = "SUD";
+        //WHEN
+        String ActualResult = monPersonnage.tourner(2);
+        //THEN
+        assertThat(ActualResult).isEqualTo(ExpectedResult);
+    }
 }
