@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class PersonnageTest {
 
+
+
     @Test
     public void testTournerZero() {
         //GIVEN
@@ -18,4 +20,14 @@ public class PersonnageTest {
         assertThat(ActualResult).isEqualTo(ExpectedResult);
     }
 
+    @Test
+    public void testTournerUn() {
+        //GIVEN
+        Personnage monPersonnage = new Personnage();
+        String ExpectedResult = "EST";
+        //WHEN
+        String ActualResult = monPersonnage.tourner(1);
+        //THEN
+        assertThat(ActualResult).isEqualTo(ExpectedResult);
+    }
 }

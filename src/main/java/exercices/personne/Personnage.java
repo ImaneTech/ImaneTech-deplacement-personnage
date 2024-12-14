@@ -7,7 +7,8 @@ public class Personnage {
     }
 
     public String tourner(int fois) {
-        return "NORD"; // Orientation par défaut
+        String[] directions = {"NORD", "EST", "SUD", "OUEST"};
+        return directions[fois % 4];
     }
 
 }
